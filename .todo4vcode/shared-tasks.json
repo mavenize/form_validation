@@ -10,8 +10,8 @@
         "phase-0"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557372341,
       "order": 1000,
       "subtasks": [
@@ -34,6 +34,346 @@
           "id": "T-01-d4",
           "text": "DoD: npm run build compiles with no errors or warnings",
           "completed": true
+        }
+      ]
+    },
+    {
+      "id": "T-02",
+      "text": "T-02 · plan.md, CLAUDE.md and board",
+      "description": "Goal: fill the CLAUDE.md template for this project, move the design files to design/, write plan.md and put every task on the board.\nFiles: CLAUDE.md, plan.md, design/, .todo4vcode/shared-tasks.json",
+      "tags": [
+        "phase-0"
+      ],
+      "priority": "Must",
+      "status": "Testing",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 2000,
+      "subtasks": [
+        {
+          "id": "T-02-d1",
+          "text": "DoD: No {{...}} placeholders left in CLAUDE.md",
+          "completed": true
+        },
+        {
+          "id": "T-02-d2",
+          "text": "DoD: plan.md has Overview, Decisions, Architecture, Tasks, Open questions and Verification",
+          "completed": true
+        },
+        {
+          "id": "T-02-d3",
+          "text": "DoD: Every plan.md task is on the board with its DoD",
+          "completed": true
+        },
+        {
+          "id": "T-02-d4",
+          "text": "DoD: npm run check passes",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "T-03",
+      "text": "T-03 · Design tokens and base styles",
+      "description": "Goal: colour, type, spacing and radius tokens taken from the style example, plus base element styles and the Poppins Google Fonts link.\nFiles: src/styles/tokens.css, src/styles/base.css, src/template.html, src/index.js",
+      "tags": [
+        "phase-1"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 3000,
+      "subtasks": [
+        {
+          "id": "T-03-d1",
+          "text": "DoD: Colours appear only in tokens.css",
+          "completed": false
+        },
+        {
+          "id": "T-03-d2",
+          "text": "DoD: Poppins loads and renders",
+          "completed": false
+        },
+        {
+          "id": "T-03-d3",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-04",
+      "text": "T-04 · Content data and createEl",
+      "description": "Goal: all copy (headings, labels, placeholders, messages, button and success text) and the country list with postal-code patterns, plus the createEl helper.\nFiles: src/data/form.js, src/data/countries.js, src/utils/dom.js",
+      "tags": [
+        "phase-1"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 4000,
+      "subtasks": [
+        {
+          "id": "T-04-d1",
+          "text": "DoD: All copy lives in src/data/",
+          "completed": false
+        },
+        {
+          "id": "T-04-d2",
+          "text": "DoD: Six countries each have a pattern and an example",
+          "completed": false
+        },
+        {
+          "id": "T-04-d3",
+          "text": "DoD: createEl matches CLAUDE.md",
+          "completed": false
+        },
+        {
+          "id": "T-04-d4",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-05",
+      "text": "T-05 · Static form",
+      "description": "Goal: build the form from JS with field, button and signupForm modules. Form has novalidate, labels, ids and aria-describedby. No validation yet.\nFiles: src/components/field.js/.css, src/components/button.js/.css, src/sections/signupForm.js/.css, src/index.js",
+      "tags": [
+        "phase-1"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 5000,
+      "subtasks": [
+        {
+          "id": "T-05-d1",
+          "text": "DoD: Form element has novalidate",
+          "completed": false
+        },
+        {
+          "id": "T-05-d2",
+          "text": "DoD: Every input has a label and a linked error element",
+          "completed": false
+        },
+        {
+          "id": "T-05-d3",
+          "text": "DoD: Layout matches the style example at 375, 800 and 1280 px",
+          "completed": false
+        },
+        {
+          "id": "T-05-d4",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-06",
+      "text": "T-06 · Validators and unit tests",
+      "description": "Goal: pure validator functions (email, country, postal code per country, password rules, confirm match) and a node:test suite with an npm test script.\nFiles: src/validation/validators.js, tests/validators.test.js, package.json, eslint.config.mjs",
+      "tags": [
+        "phase-2"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 6000,
+      "subtasks": [
+        {
+          "id": "T-06-d1",
+          "text": "DoD: Every rule has passing and failing test cases",
+          "completed": false
+        },
+        {
+          "id": "T-06-d2",
+          "text": "DoD: Each country has valid and invalid postal-code samples",
+          "completed": false
+        },
+        {
+          "id": "T-06-d3",
+          "text": "DoD: npm test passes",
+          "completed": false
+        },
+        {
+          "id": "T-06-d4",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-07",
+      "text": "T-07 · Live validation and state styling",
+      "description": "Goal: validate on input and blur, set setCustomValidity so :user-valid and :user-invalid drive the styling, show inline messages, re-check postal code on country change and confirm on password change.\nFiles: src/validation/liveValidation.js, src/components/field.css, src/sections/signupForm.js",
+      "tags": [
+        "phase-2"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 7000,
+      "subtasks": [
+        {
+          "id": "T-07-d1",
+          "text": "DoD: Errors show while typing and on leaving a field",
+          "completed": false
+        },
+        {
+          "id": "T-07-d2",
+          "text": "DoD: Invalid fields are red with a message, valid fields show the valid state",
+          "completed": false
+        },
+        {
+          "id": "T-07-d3",
+          "text": "DoD: Changing country re-checks the postal code",
+          "completed": false
+        },
+        {
+          "id": "T-07-d4",
+          "text": "DoD: Changing the password re-checks the confirmation",
+          "completed": false
+        },
+        {
+          "id": "T-07-d5",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-08",
+      "text": "T-08 · Submit handling and high five",
+      "description": "Goal: on submit, validate everything, show a form-level error and focus the first invalid field, or show the high-five success panel with Start over.\nFiles: src/sections/signupForm.js/.css, src/components/successPanel.js/.css",
+      "tags": [
+        "phase-2"
+      ],
+      "priority": "Must",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 8000,
+      "subtasks": [
+        {
+          "id": "T-08-d1",
+          "text": "DoD: Submitting empty or invalid input flags every field and shows the form message",
+          "completed": false
+        },
+        {
+          "id": "T-08-d2",
+          "text": "DoD: Focus moves to the first invalid field",
+          "completed": false
+        },
+        {
+          "id": "T-08-d3",
+          "text": "DoD: A valid submit shows the high five",
+          "completed": false
+        },
+        {
+          "id": "T-08-d4",
+          "text": "DoD: Start over resets the form",
+          "completed": false
+        },
+        {
+          "id": "T-08-d5",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-09",
+      "text": "T-09 · Responsive and accessibility pass",
+      "description": "Goal: check breakpoints, focus rings, keyboard-only use and that screen readers announce errors.\nFiles: CSS files under src/, src/components/field.js",
+      "tags": [
+        "phase-3"
+      ],
+      "priority": "Should",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 9000,
+      "subtasks": [
+        {
+          "id": "T-09-d1",
+          "text": "DoD: Checked at 375, 800 and 1280 px",
+          "completed": false
+        },
+        {
+          "id": "T-09-d2",
+          "text": "DoD: Tab order follows the visual order and focus is visible",
+          "completed": false
+        },
+        {
+          "id": "T-09-d3",
+          "text": "DoD: Errors are announced through aria-live",
+          "completed": false
+        },
+        {
+          "id": "T-09-d4",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-10",
+      "text": "T-10 · Test matrix and README",
+      "description": "Goal: run the full manual test matrix from plan.md and write run instructions in the README.\nFiles: plan.md, README.md",
+      "tags": [
+        "phase-3"
+      ],
+      "priority": "Should",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 10000,
+      "subtasks": [
+        {
+          "id": "T-10-d1",
+          "text": "DoD: Every matrix case in plan.md checked in Chrome, Firefox and Safari",
+          "completed": false
+        },
+        {
+          "id": "T-10-d2",
+          "text": "DoD: README explains install, dev, build and test",
+          "completed": false
+        },
+        {
+          "id": "T-10-d3",
+          "text": "DoD: npm run check passes",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "T-11",
+      "text": "T-11 · GitHub Pages deploy",
+      "description": "Goal: publish dist/ to the gh-pages branch.\nFiles: webpack.config.js (if a publicPath is needed)",
+      "tags": [
+        "phase-3"
+      ],
+      "priority": "Could",
+      "status": "Todo",
+      "completed": false,
+      "createdAt": 1794557528211,
+      "order": 11000,
+      "subtasks": [
+        {
+          "id": "T-11-d1",
+          "text": "DoD: Live URL loads the form",
+          "completed": false
+        },
+        {
+          "id": "T-11-d2",
+          "text": "DoD: Validation works on the live site",
+          "completed": false
         }
       ]
     }
