@@ -1,1 +1,2 @@
-// Entry point. Global CSS imports and the form section are added in later tasks.
+import "./styles/tokens.css";
+import "./styles/base.css";

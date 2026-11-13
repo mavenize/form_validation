@@ -45,8 +45,8 @@
         "phase-0"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 2000,
       "subtasks": [
@@ -80,7 +80,7 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 3000,
@@ -88,17 +88,17 @@
         {
           "id": "T-03-d1",
           "text": "DoD: Colours appear only in tokens.css",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-03-d2",
           "text": "DoD: Poppins loads and renders",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-03-d3",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },

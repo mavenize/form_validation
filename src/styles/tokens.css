@@ -1,0 +1,53 @@
+/* Design tokens. Colours sampled from design/style_example.png. Every colour in the project lives here. */
+:root {
+  /* Colour */
+  --color-bg: #ffffff;
+  --color-text: #202125;
+  --color-heading: #111111;
+  --color-muted: #656668;
+  --color-border: #dcdcdc;
+  --color-border-hover: #b8b8b8;
+  --color-accent: #3984f6;
+  --color-focus-ring: rgb(57 132 246 / 0.35);
+  --color-button: #222222;
+  --color-button-hover: #000000;
+  --color-on-button: #ffffff;
+  --color-error: #c62828;
+  --color-error-bg: #fdf2f2;
+  --color-error-ring: rgb(198 40 40 / 0.2);
+  --color-valid: #1e7e45;
+  --color-success-bg: #f1f8f3;
+  --shadow-input: 0 1px 2px rgb(0 0 0 / 0.06);
+
+  /* Type */
+  --font-sans:
+    "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 0.9375rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Shape and size */
+  --radius: 4px;
+  --border-width: 1px;
+  --control-height: 2.875rem;
+  --focus-ring-width: 3px;
+  --form-max-width: 40rem;
+
+  /* Motion */
+  --transition-fast: 120ms ease-out;
+}
