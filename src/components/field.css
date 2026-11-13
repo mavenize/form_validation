@@ -6,26 +6,48 @@
 }
 
 .field__control {
+  --control-border: var(--color-border);
+  --control-ring: var(--color-focus-ring);
+  --control-bg: var(--color-bg);
+
   width: 100%;
   min-height: var(--control-height);
   padding: 0 var(--space-4);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--border-width) solid var(--control-border);
   border-radius: var(--radius);
-  background: var(--color-bg);
+  background: var(--control-bg);
   box-shadow: var(--shadow-input);
   transition:
     border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .field__control:hover {
-  border-color: var(--color-border-hover);
+  --control-border: var(--color-border-hover);
 }
 
 .field__control:focus-visible {
+  --control-border: var(--color-accent);
+
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 var(--focus-ring-width) var(--color-focus-ring);
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--control-ring);
+}
+
+/*
+  Validation states. :user-valid / :user-invalid are the primary hooks. The data attributes
+  set by liveValidation.js make the timing the same in every browser: valid shows as soon as
+  the user has typed a valid value, invalid only once the field has been left.
+  :is() keeps the rule working in browsers that do not know :user-valid / :user-invalid.
+*/
+.field__control:is(:user-valid, [data-dirty]:valid) {
+  --control-border: var(--color-valid);
+}
+
+.field__control:is(:user-invalid, [data-touched]:invalid) {
+  --control-border: var(--color-error);
+  --control-ring: var(--color-error-ring);
+  --control-bg: var(--color-error-bg);
 }
 
 /* Select: native arrow replaced by a chevron drawn with borders, as in the design. */

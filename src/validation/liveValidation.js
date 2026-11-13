@@ -1,0 +1,73 @@
+import { fields, formCopy } from "../data/form.js";
+import { validateField, findCountry } from "./validators.js";
+
+// When a field changes, these fields are re-checked too.
+const DEPENDENTS = {
+  country: ["postalCode"],
+  password: ["confirmPassword"],
+};
+
+function getValues(form) {
+  return Object.fromEntries(
+    Object.keys(fields).map((name) => [name, form.elements[name].value]),
+  );
+}
+
+function isRevealed(control) {
+  return control.hasAttribute("data-touched");
+}
+
+// Runs the field's validator and stores the result with setCustomValidity, so :invalid,
+// :user-invalid and :user-valid follow the custom rules. The message is shown only once the
+// field has been left (data-touched), so the first keystrokes are not flagged as errors.
+export function updateField(form, name, { touch = false } = {}) {
+  const control = form.elements[name];
+  const message = validateField(name, getValues(form));
+  control.setCustomValidity(message);
+  if (touch) control.setAttribute("data-touched", "");
+
+  const shownMessage = isRevealed(control) ? message : "";
+  const error = control.closest(".field").querySelector(".field__error");
+  error.textContent = shownMessage;
+
+  if (shownMessage) control.setAttribute("aria-invalid", "true");
+  else control.removeAttribute("aria-invalid");
+
+  return message;
+}
+
+function updatePostalCodePlaceholder(form) {
+  const country = findCountry(form.elements.country.value);
+  form.elements.postalCode.placeholder = country
+    ? formCopy.postalCodeExample(country.example)
+    : fields.postalCode.placeholder;
+}
+
+function updateDependents(form, name) {
+  (DEPENDENTS[name] ?? []).forEach((dependent) => {
+    const control = form.elements[dependent];
+    if (control.value || isRevealed(control)) updateField(form, dependent);
+  });
+}
+
+export function bindLiveValidation(form) {
+  form.addEventListener("input", (event) => {
+    const { name } = event.target;
+    if (!(name in fields)) return;
+
+    event.target.setAttribute("data-dirty", "");
+    // Picking from a select is a finished choice, so it is revealed straight away.
+    updateField(form, name, { touch: event.target.tagName === "SELECT" });
+    updateDependents(form, name);
+    if (name === "country") updatePostalCodePlaceholder(form);
+  });
+
+  form.addEventListener("focusout", (event) => {
+    const { name } = event.target;
+    if (!(name in fields)) return;
+    updateField(form, name, { touch: true });
+  });
+
+  // Prime every control's validity so the CSS state is right from the first interaction.
+  Object.keys(fields).forEach((name) => updateField(form, name));
+}

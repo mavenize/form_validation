@@ -3,6 +3,7 @@ import { createField } from "../components/field.js";
 import { createButton } from "../components/button.js";
 import { fields, sections, formCopy } from "../data/form.js";
 import { countries } from "../data/countries.js";
+import { bindLiveValidation } from "../validation/liveValidation.js";
 import "./signupForm.css";
 
 // Fields that share a row with a neighbour from the tablet breakpoint up, as in the design.
@@ -55,6 +56,8 @@ export function createSignupForm() {
   const actions = createEl("div", { className: "signup__actions" });
   actions.appendChild(createButton(formCopy.submit, { type: "submit" }));
   form.appendChild(actions);
+
+  bindLiveValidation(form);
 
   page.appendChild(form);
   return page;
