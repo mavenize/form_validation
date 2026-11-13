@@ -1,0 +1,21 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--button-height);
+  padding: 0 var(--space-6);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--color-button);
+  color: var(--color-on-button);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-fast);
+}
+
+.button:hover {
+  background: var(--color-button-hover);
+}
+
+.button:focus-visible {
+  outline-offset: 2px;
+}

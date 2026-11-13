@@ -110,8 +110,8 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 4000,
       "subtasks": [
@@ -145,7 +145,7 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 5000,
@@ -153,22 +153,22 @@
         {
           "id": "T-05-d1",
           "text": "DoD: Form element has novalidate",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-05-d2",
           "text": "DoD: Every input has a label and a linked error element",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-05-d3",
           "text": "DoD: Layout matches the style example at 375, 800 and 1280 px",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-05-d4",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },
