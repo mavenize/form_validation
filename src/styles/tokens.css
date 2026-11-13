@@ -27,6 +27,7 @@
   --font-weight-medium: 500;
   --font-size-sm: 0.8125rem;
   --font-size-base: 0.9375rem;
+  --font-size-control: 1rem; /* 16px minimum stops iOS Safari zooming on focus */
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.5rem;
   --font-size-display: 3.5rem;

@@ -13,6 +13,7 @@
   width: 100%;
   min-height: var(--control-height);
   padding: 0 var(--space-4);
+  font-size: var(--font-size-control);
   border: var(--border-width) solid var(--control-border);
   border-radius: var(--radius);
   background: var(--control-bg);

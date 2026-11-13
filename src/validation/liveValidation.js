@@ -30,8 +30,9 @@ export function updateField(form, name, { touch = false } = {}) {
   const error = control.closest(".field").querySelector(".field__error");
   error.textContent = shownMessage;
 
-  if (shownMessage) control.setAttribute("aria-invalid", "true");
-  else control.removeAttribute("aria-invalid");
+  // Always explicit: without it Chrome reports empty required fields as invalid to screen
+  // readers on page load, before the user has done anything.
+  control.setAttribute("aria-invalid", shownMessage ? "true" : "false");
 
   return message;
 }

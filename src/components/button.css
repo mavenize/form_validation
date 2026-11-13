@@ -15,7 +15,3 @@
 .button:hover {
   background: var(--color-button-hover);
 }
-
-.button:focus-visible {
-  outline-offset: 2px;
-}

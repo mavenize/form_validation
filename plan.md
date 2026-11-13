@@ -121,6 +121,7 @@ Until these are answered, the build follows the design as drawn.
 1. **Submit button text:** the design says "Continue to payment", which is what the build uses. "Create account" would suit a form with a password better.
 2. **"Password" heading:** the design has no matching section, so the heading is new copy.
 3. **Valid-state styling:** the design shows no valid state. The build uses a subtle green border. Should it show nothing instead?
+4. **Page heading (added in T-09):** the design has no page title, so a visually hidden `<h1>` "Sign up" gives screen-reader users a heading to land on. Is that wording right?
 
 ## Verification
 

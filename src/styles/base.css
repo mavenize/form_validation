@@ -54,8 +54,8 @@ button {
 }
 
 :focus-visible {
-  outline: var(--focus-ring-width) solid var(--color-focus-ring);
-  outline-offset: 1px;
+  outline: var(--focus-ring-width) solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 /* Hidden on screen, still read by screen readers. */

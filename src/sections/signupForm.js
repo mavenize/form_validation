@@ -48,6 +48,11 @@ function createForm({ onSuccess }) {
     attrs: { novalidate: "" },
   });
 
+  // The design has no visible page title; this gives screen-reader users a heading to land on.
+  form.appendChild(
+    createEl("h1", { className: "visually-hidden", text: formCopy.title }),
+  );
+
   sections.forEach((section) => form.appendChild(createSection(section)));
 
   const message = createEl("p", {

@@ -85,6 +85,7 @@ export const messages = {
 };
 
 export const formCopy = {
+  title: "Sign up",
   submit: "Continue to payment",
   postalCodeExample: (example) => `Postal Code, e.g. ${example}`,
   errorSummary: (count) =>

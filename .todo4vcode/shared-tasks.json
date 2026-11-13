@@ -255,8 +255,8 @@
         "phase-2"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 8000,
       "subtasks": [
@@ -295,7 +295,7 @@
         "phase-3"
       ],
       "priority": "Should",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 9000,
@@ -303,12 +303,12 @@
         {
           "id": "T-09-d1",
           "text": "DoD: Checked at 375, 800 and 1280 px",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-09-d2",
           "text": "DoD: Tab order follows the visual order and focus is visible",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-09-d3",
@@ -318,7 +318,7 @@
         {
           "id": "T-09-d4",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },
