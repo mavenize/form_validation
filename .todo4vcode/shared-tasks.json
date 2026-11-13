@@ -145,8 +145,8 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 5000,
       "subtasks": [
@@ -180,7 +180,7 @@
         "phase-2"
       ],
       "priority": "Must",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 6000,
@@ -188,22 +188,22 @@
         {
           "id": "T-06-d1",
           "text": "DoD: Every rule has passing and failing test cases",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-06-d2",
           "text": "DoD: Each country has valid and invalid postal-code samples",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-06-d3",
           "text": "DoD: npm test passes",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-06-d4",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },

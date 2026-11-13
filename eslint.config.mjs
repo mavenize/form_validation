@@ -30,8 +30,8 @@ export default defineConfig([
     },
   },
   {
-    files: ["webpack.config.js"],
-    languageOptions: { sourceType: "commonjs", globals: globals.node },
+    files: ["webpack.config.js", "tests/**/*.js"],
+    languageOptions: { globals: globals.node },
   },
   eslintConfigPrettier,
 ]);

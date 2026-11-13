@@ -12,13 +12,14 @@ A browser sign-up form (Email, Country, Postal Code, Password and Password Confi
 - `npm run build`: production build to `dist/`
 - `npm run lint`: ESLint on the whole project
 - `npm run format`: Prettier rewrites every file
-- `npm run check`: lint, format check and build in one go. This must pass before any task moves to `Testing`.
+- `npm test`: unit tests in `tests/` with the built-in `node:test` runner
+- `npm run check`: lint, format check, tests and build in one go. This must pass before any task moves to `Testing`.
 
 ## Project setup (task T-01)
 
 Every new JS project starts with this as its first task, before any feature code.
 
-1. `git init`, then `npm init -y`. Set `"private": true` in `package.json`.
+1. `git init`, then `npm init -y`. Set `"private": true` and `"type": "module"` in `package.json`, so Node runs `src/` modules in tests without warnings.
 2. Add `.gitignore` with `node_modules` and `dist`.
 3. Webpack:
    `npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader`
@@ -44,7 +45,8 @@ Every new JS project starts with this as its first task, before any feature code
      "lint:fix": "eslint . --fix",
      "format": "prettier . --write",
      "format:check": "prettier . --check",
-     "check": "npm run lint && npm run format:check && npm run build"
+     "test": "node --test tests/",
+     "check": "npm run lint && npm run format:check && npm test && npm run build"
    }
    ```
 7. Run `npm run format` once so the first commit is already formatted, then `npm run check`.
@@ -52,15 +54,15 @@ Every new JS project starts with this as its first task, before any feature code
 `webpack.config.js` starting point:
 
 ```js
-const path = require("node:path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import path from "node:path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+export default {
   mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
   },
   devtool: "eval-source-map",
@@ -115,8 +117,8 @@ export default defineConfig([
     },
   },
   {
-    files: ["webpack.config.js"],
-    languageOptions: { sourceType: "commonjs", globals: globals.node },
+    files: ["webpack.config.js", "tests/**/*.js"],
+    languageOptions: { globals: globals.node },
   },
   eslintConfigPrettier,
 ]);
