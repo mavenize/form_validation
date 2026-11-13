@@ -80,8 +80,8 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 3000,
       "subtasks": [
@@ -110,7 +110,7 @@
         "phase-1"
       ],
       "priority": "Must",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 4000,
@@ -118,22 +118,22 @@
         {
           "id": "T-04-d1",
           "text": "DoD: All copy lives in src/data/",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-04-d2",
           "text": "DoD: Six countries each have a pattern and an example",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-04-d3",
           "text": "DoD: createEl matches CLAUDE.md",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-04-d4",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },
