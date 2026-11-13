@@ -295,8 +295,8 @@
         "phase-3"
       ],
       "priority": "Should",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 9000,
       "subtasks": [
@@ -330,7 +330,7 @@
         "phase-3"
       ],
       "priority": "Should",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 10000,
@@ -343,12 +343,12 @@
         {
           "id": "T-10-d2",
           "text": "DoD: README explains install, dev, build and test",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-10-d3",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -360,7 +360,7 @@
         "phase-3"
       ],
       "priority": "Could",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 11000,

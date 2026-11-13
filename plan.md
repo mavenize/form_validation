@@ -131,17 +131,18 @@ Until these are answered, the build follows the design as drawn.
 - Every DoD item is checked before the task moves to Testing.
 - Anything that needs a real browser is listed in the hand-off for the user to look at.
 
-**Whole project (T-10 matrix):**
+**Whole project (T-10 matrix):** rows marked (Chrome) were run in headless Chrome with real keystrokes and clicks against the production build. The last two rows need a person.
 
-- [ ] Submit the empty form: every field is red, the form message shows, focus is on Email
-- [ ] Tab through all fields without typing: each shows its "required" error on blur
-- [ ] Email: `a`, `a@`, `a@b` and `a@b.` are rejected; `a@b.se` is accepted, live while typing
-- [ ] Each country: one valid and one invalid postal code
-- [ ] Enter `113 51` with Sweden, switch to the US: postal code turns invalid; switch back: valid again
-- [ ] Postal code entered before any country is chosen: the message asks for a country first
-- [ ] Password: too short, no uppercase, no lowercase and no digit each give their own message
-- [ ] Confirm mismatch, then fixed by editing the confirmation, and fixed again by editing the password
-- [ ] A fully valid submit shows the high five; Start over brings back an empty form with no red fields
-- [ ] Layout at 375, 800 and 1280 px
-- [ ] Keyboard only: every control reachable, visible focus, Enter submits
-- [ ] Chrome, Firefox and Safari behave the same
+- [x] Submit the empty form: every field is red, the form message shows, focus is on Email (Chrome)
+- [x] Tab through all fields without typing: each shows its "required" error on blur (Chrome)
+- [x] Email: `a`, `a@`, `a@b` and `a@b.` are rejected; `a@b.se` is accepted, live while typing (Chrome)
+- [x] Each country: one valid and one invalid postal code (Chrome)
+- [x] Enter `113 51` with Sweden, switch to the US: postal code turns invalid; switch back: valid again (Chrome)
+- [x] Postal code entered before any country is chosen: the message asks for a country first (Chrome)
+- [x] Password: too short, no uppercase, no lowercase and no digit each give their own message (Chrome)
+- [x] Confirm mismatch, then fixed by editing the confirmation, and fixed again by editing the password (Chrome)
+- [x] A fully valid submit shows the high five; Start over brings back an empty form with no red fields (Chrome)
+- [x] Layout at 375, 800 and 1280 px (Chrome)
+- [x] Keyboard only: every control reachable, visible focus, Enter submits (Chrome)
+- [ ] Firefox and Safari behave the same as Chrome
+- [ ] VoiceOver reads the error summary and inline errors without being too noisy (open from T-09)
