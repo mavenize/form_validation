@@ -1,0 +1,41 @@
+{
+  "format": "todo4vcode-shared-tasks",
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "id": "T-01",
+      "text": "T-01 · Project setup",
+      "description": "Goal: Webpack, ESLint and Prettier with a dev server, CSS and asset handling.\nFiles: package.json, webpack.config.js, eslint.config.mjs, .prettierrc, .prettierignore, .gitignore, src/index.js, src/template.html",
+      "tags": [
+        "phase-0"
+      ],
+      "priority": "Must",
+      "status": "Testing",
+      "completed": false,
+      "createdAt": 1794557372341,
+      "order": 1000,
+      "subtasks": [
+        {
+          "id": "T-01-d1",
+          "text": "DoD: npm run dev serves the page",
+          "completed": true
+        },
+        {
+          "id": "T-01-d2",
+          "text": "DoD: npm run lint and npm run format:check pass",
+          "completed": true
+        },
+        {
+          "id": "T-01-d3",
+          "text": "DoD: node_modules and dist are git-ignored",
+          "completed": true
+        },
+        {
+          "id": "T-01-d4",
+          "text": "DoD: npm run build compiles with no errors or warnings",
+          "completed": true
+        }
+      ]
+    }
+  ]
+}
