@@ -50,6 +50,20 @@ function updateDependents(form, name) {
   });
 }
 
+// Checks and reveals every field, as on a submit attempt. Returns the names of invalid
+// fields in form order.
+export function validateAll(form) {
+  return Object.keys(fields).filter(
+    (name) => updateField(form, name, { touch: true }) !== "",
+  );
+}
+
+export function countInvalid(form) {
+  return Object.keys(fields).filter(
+    (name) => !form.elements[name].validity.valid,
+  ).length;
+}
+
 export function bindLiveValidation(form) {
   form.addEventListener("input", (event) => {
     const { name } = event.target;

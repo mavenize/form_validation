@@ -215,8 +215,8 @@
         "phase-2"
       ],
       "priority": "Must",
-      "status": "Testing",
-      "completed": false,
+      "status": "Done",
+      "completed": true,
       "createdAt": 1794557528211,
       "order": 7000,
       "subtasks": [
@@ -255,7 +255,7 @@
         "phase-2"
       ],
       "priority": "Must",
-      "status": "Todo",
+      "status": "Testing",
       "completed": false,
       "createdAt": 1794557528211,
       "order": 8000,
@@ -263,27 +263,27 @@
         {
           "id": "T-08-d1",
           "text": "DoD: Submitting empty or invalid input flags every field and shows the form message",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-08-d2",
           "text": "DoD: Focus moves to the first invalid field",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-08-d3",
           "text": "DoD: A valid submit shows the high five",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-08-d4",
           "text": "DoD: Start over resets the form",
-          "completed": false
+          "completed": true
         },
         {
           "id": "T-08-d5",
           "text": "DoD: npm run check passes",
-          "completed": false
+          "completed": true
         }
       ]
     },
